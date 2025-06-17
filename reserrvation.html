@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savanna Table Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "j4k3UnkiOiZTUuLRb",
+      });
+   })();
+</script>
+</head>
+
+<body>
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #1D282D;
+          color: #333;
+        }
+        </style>
+
+    <header>
+        <div class="top-title"><a href="index.html">Savanna Table Restaurant</a></div>
+        <nav>
+            <ul class="top-title">
+                <li><a href="reserrvation.html">Reservation</a></li>
+                <li><a href="menu.pdf" target="_blank">Full Menu</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Reserv">
+        <section class="reservation-form-section">
+            <h2>Make a Reservation</h2>
+            <form action="#" method="post" class="reservation-form">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="name" name="fullName" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+        
+              <div class="form-group-inline">
+                <div>
+                  <label for="date">Date</label>
+                  <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                  <label for="time">Time</label>
+                  <input type="time" id="time" name="time" required>
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5+">5 or more</option>
+                </select>
+              </div>
+        
+              <div class="form-group-text">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+              </div>
+        
+              <button type="submit" class="button-sub" onclick="sendMail(event)">Book Now</button>
+
+            </form>
+          </section>
+    </div>
+ 
+
+   
+</body>
+</html>
